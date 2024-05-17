@@ -49,6 +49,10 @@ module.exports = {
           values: theme('transitionDelay')
         }
       );
-    })
-  ]
+    }),
+    require('daisyui')
+  ],
+  daisyui: {
+    themes: ['light', 'dark', 'cupcake', 'sunset', 'retro', 'luxury']
+  }
 };

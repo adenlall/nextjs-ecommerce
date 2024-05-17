@@ -26,9 +26,9 @@ function SubmitButton() {
       )}
     >
       {pending ? (
-        <LoadingDots className="bg-white" />
+        <LoadingDots className="bg-base-300" />
       ) : (
-        <XMarkIcon className="hover:text-accent-3 mx-[1px] h-4 w-4 text-white dark:text-black" />
+        <XMarkIcon className="btn btn-square btn-xs" />
       )}
     </button>
   );

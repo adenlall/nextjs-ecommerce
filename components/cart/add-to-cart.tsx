@@ -16,9 +16,8 @@ function SubmitButton({
   selectedVariantId: string | undefined;
 }) {
   const { pending } = useFormStatus();
-  const buttonClasses =
-    'relative flex w-full items-center justify-center rounded-full bg-blue-600 p-4 tracking-wide text-white';
-  const disabledClasses = 'cursor-not-allowed opacity-60 hover:opacity-60';
+  const buttonClasses = 'btn btn-primary btn-block';
+  const disabledClasses = 'cursor-not-allowed disabled btn-disabled';
 
   if (!availableForSale) {
     return (
@@ -35,9 +34,7 @@ function SubmitButton({
         aria-disabled
         className={clsx(buttonClasses, disabledClasses)}
       >
-        <div className="absolute left-0 ml-4">
-          <PlusIcon className="h-5" />
-        </div>
+        <PlusIcon className="h-5" />
         Add To Cart
       </button>
     );
@@ -51,13 +48,11 @@ function SubmitButton({
       aria-label="Add to cart"
       aria-disabled={pending}
       className={clsx(buttonClasses, {
-        'hover:opacity-90': true,
+        'hover:opacity-90 ': true,
         [disabledClasses]: pending
       })}
     >
-      <div className="absolute left-0 ml-4">
-        {pending ? <LoadingDots className="mb-3 bg-white" /> : <PlusIcon className="h-5" />}
-      </div>
+      {pending ? <LoadingDots className="bg-base-100" /> : <PlusIcon className="h-5" />}
       Add To Cart
     </button>
   );
