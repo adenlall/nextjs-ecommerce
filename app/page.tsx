@@ -12,15 +12,21 @@ export const metadata = {
 export default async function HomePage() {
   return (
     <>
-      <ThreeItemGrid />
-      <div className="container prose m-auto my-8 w-full rounded-box border border-base-content bg-base-200 p-5 text-center">
-        <img src="/brand/header-t2-light.svg" className="m-auto -mb-8 w-1/2" />
-        <h1>
-          shop anything from a store <br />
-          that you trust
-        </h1>
+      <div className="mb-8 flex flex-col space-y-8 xl:flex-row xl:items-stretch xl:justify-center xl:space-x-8 xl:space-y-0">
+        <div className="space-y-8">
+          <ThreeItemGrid />
+          <div className="container m-auto w-full rounded-box border border-base-content bg-base-200 p-5">
+            <div className="prose m-auto text-center">
+              <img src="/brand/header-t2-light.svg" className="m-auto -mb-8 w-1/2" />
+              <h1>
+                shop anything from a store <br />
+                that you trust
+              </h1>
+            </div>
+          </div>
+        </div>
+        <Carousel />
       </div>
-      <Carousel />
       <Footer />
     </>
   );

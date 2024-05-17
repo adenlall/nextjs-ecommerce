@@ -13,9 +13,13 @@ module.exports = {
           from: { opacity: 0 },
           to: { opacity: 1 }
         },
-        marquee: {
+        marqueex: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-100%)' }
+        },
+        marqueey: {
+          '0%': { transform: 'translateY(0%)' },
+          '100%': { transform: 'translateY(-100%)' }
         },
         blink: {
           '0%': { opacity: 0.2 },
@@ -25,7 +29,8 @@ module.exports = {
       },
       animation: {
         fadeIn: 'fadeIn .3s ease-in-out',
-        carousel: 'marquee 60s linear infinite',
+        carouselx: 'marqueex 60s linear infinite',
+        carousely: 'marqueey 60s linear infinite',
         blink: 'blink 1.4s both infinite'
       }
     }
