@@ -88,7 +88,6 @@ export async function shopifyFetch<T>({
     });
 
     const body = await result.json();
-    console.log(body);
 
     if (body.errors) {
       throw body.errors[0];
@@ -107,7 +106,6 @@ export async function shopifyFetch<T>({
         query
       };
     }
-
     throw {
       error: e,
       query
@@ -192,7 +190,6 @@ const reshapeProducts = (products: ShopifyProduct[]) => {
   for (const product of products) {
     if (product) {
       const reshapedProduct = reshapeProduct(product);
-
       if (reshapedProduct) {
         reshapedProducts.push(reshapedProduct);
       }

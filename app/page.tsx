@@ -3,9 +3,16 @@ import { ThreeItemGrid } from 'components/grid/three-items';
 import Footer from 'components/layout/footer';
 
 export const metadata = {
-  description: 'High-performance ecommerce store built with Next.js, Vercel, and Shopify.',
+  description:
+    'Shop digital solutions built by our team that fit your needs, with a 100% guarantee.',
   openGraph: {
-    type: 'website'
+    type: 'website',
+    images: [
+      {
+        url: '/brand/banner.svg',
+        alt: 'website banner'
+      }
+    ]
   }
 };
 

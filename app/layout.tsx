@@ -14,8 +14,16 @@ const twitterSite = TWITTER_SITE ? ensureStartsWith(TWITTER_SITE, 'https://') : 
 export const metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: SITE_NAME!,
+    default: SITE_NAME! + ' - ' + 'A shop that you trust',
     template: `%s | ${SITE_NAME}`
+  },
+  openGraph: {
+    images: [
+      {
+        url: '/brand/banner.svg',
+        alt: 'website banner'
+      }
+    ]
   },
   robots: {
     follow: true,
@@ -26,7 +34,13 @@ export const metadata = {
       twitter: {
         card: 'summary_large_image',
         creator: twitterCreator,
-        site: twitterSite
+        site: twitterSite,
+        images: [
+          {
+            url: '/brand/banner.svg',
+            alt: 'website banner'
+          }
+        ]
       }
     })
 };
