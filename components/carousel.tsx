@@ -11,7 +11,7 @@ export async function Carousel() {
   //
   return (
     <div className="">
-      <div className="container m-auto mb-8 w-full overflow-x-auto rounded-box border border-base-content bg-base-200 p-4 xl:sticky xl:top-0 xl:m-0 xl:max-h-screen xl:w-[10em]">
+      <div className="container m-auto mb-8 w-full overflow-x-auto rounded-box border border-base-content bg-base-200 p-4 xl:sticky xl:top-0 xl:m-0 xl:h-screen xl:max-h-[45em] xl:w-[10em]">
         <ul className="flex animate-carouselx gap-4 xl:animate-carousely xl:flex-col">
           {carouselProducts.map((product, i) => (
             <li
