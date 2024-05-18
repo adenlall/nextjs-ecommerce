@@ -20,7 +20,7 @@ export const metadata = {
   openGraph: {
     images: [
       {
-        url: '/brand/banner.svg',
+        url: 'https://adestore.vercel.app/brand/banner.svg',
         alt: 'website banner'
       }
     ]
@@ -37,7 +37,7 @@ export const metadata = {
         site: twitterSite,
         images: [
           {
-            url: '/brand/banner.svg',
+            url: 'https://adestore.vercel.app/brand/banner.svg',
             alt: 'website banner'
           }
         ]

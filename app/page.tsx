@@ -9,7 +9,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: '/brand/banner.svg',
+        url: 'https://adestore.vercel.app/brand/banner.svg',
         alt: 'website banner'
       }
     ]
