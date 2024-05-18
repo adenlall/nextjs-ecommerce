@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 function ThreeItemGridItem({ item, priority }: { item: Product; priority?: boolean }) {
   return (
-    <div className={'md:col-span-2 md:row-span-1'}>
+    <div className={''}>
       <Link
         className="relative block aspect-square h-full w-full"
         href={`/product/${item?.handle}`}

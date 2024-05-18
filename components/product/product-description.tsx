@@ -10,6 +10,9 @@ export function ProductDescription({ product }: { product: Product }) {
     <>
       <div className="mb-6 flex flex-col border-b border-base-content/50 pb-6">
         <h1 className="mb-2 text-5xl font-medium">{product.title}</h1>
+        <div className="mb-3 flex gap-2">
+          {product?.tags?.map((item) => <li className="badge">{item}</li>)}
+        </div>
         <div className="btn btn-secondary mr-auto w-auto">
           <Price
             amount={product.priceRange.maxVariantPrice.amount}
