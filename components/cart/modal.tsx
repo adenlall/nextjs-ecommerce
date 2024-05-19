@@ -39,6 +39,22 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
 
   return (
     <>
+      <dialog id="go_checkout" className="modal">
+        <div className="modal-box flex flex-col items-center justify-center">
+          <span className="loading loading-ring loading-lg"></span>
+          <h3 className="text-lg font-bold">
+            Remember the Security password : `
+            <strong>
+              <code>adestore</code>
+            </strong>
+            `
+          </h3>
+          <p className="py-4">You will be automatically redirected checkout page.</p>
+        </div>
+        <form method="dialog" className="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
       <button aria-label="Open cart" onClick={openCart}>
         <OpenCart quantity={cart?.totalQuantity} />
       </button>
@@ -171,9 +187,17 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
                       />
                     </div>
                   </div>
-                  <a href={cart.checkoutUrl} className="btn btn-primary btn-block">
+                  <button
+                    onClick={() => {
+                      document.getElementById('go_checkout').showModal();
+                      setTimeout(() => {
+                        window.location.href = cart.checkoutUrl;
+                      }, 3000);
+                    }}
+                    className="btn btn-primary btn-block"
+                  >
                     Proceed to Checkout
-                  </a>
+                  </button>
                 </div>
               )}
             </Dialog.Panel>
